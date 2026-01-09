@@ -1,0 +1,65 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-wheel-metadata/
+
+# ===== Virtual Env =====
+ENV/
+env.bak/
+venv.bak/
+
+# ===== Environment variables =====
+.env
+
+# ===== Logs =====
+*.log
+logs/
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== Build / cache =====
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Editor =====
+.vscode/
+.idea/
+*.swp
+
+# ===== AI / LLM =====
+.cache/
+huggingface/
+wandb/
+mlruns/
+
+# ===== Credentials / Secrets =====
+*.key
+*.pem
+*.crt
+secrets/
+credentials/
+
+# ===== Tests =====
+.coverage
+htmlcov/
+
+# ===== Node (kalau ada UI / tooling) =====
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# ===== Git =====
+.git/
