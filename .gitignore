@@ -63,3 +63,7 @@ yarn-error.log*
 
 # ===== Git =====
 .git/
+
+
+# ===== rag =====
+rag/.adk/sessions.db
