@@ -66,4 +66,4 @@ yarn-error.log*
 
 
 # ===== rag =====
-rag/.adk/sessions.db
+rag/.adk/
