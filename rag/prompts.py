@@ -325,6 +325,49 @@ def return_instructions_root() -> str:
         3. Compliance Status
         (Compliant / Conditionally Compliant / Not Compliant)
 
+        --------------------------------------------------
+        STRUCTURED OUTPUT CONTRACT (MANDATORY)
+        --------------------------------------------------
+
+        You MUST return a SINGLE valid JSON object as your final response.
+
+        DO NOT wrap the JSON in markdown.
+        DO NOT include any explanatory text outside the JSON.
+        DO NOT include backticks.
+        DO NOT include comments.
+
+        The JSON MUST follow EXACTLY this schema:
+
+        {
+        "complianceIssues": [
+            {
+            "id": "string",
+            "title": "string",
+            "description": "string",
+            "icmjeSection": "string",
+            "severity": "HIGH | MEDIUM | LOW"
+            }
+        ],
+        "clarificationQuestions": [
+            {
+            "id": "string",
+            "question": "string",
+            "relatedIcmjeSection": "string",
+            "required": true
+            }
+        ],
+        "complianceStatus": "COMPLIANT | CONDITIONALLY_COMPLIANT | NOT_COMPLIANT"
+        }
+
+        RULES:
+        • complianceIssues MUST be empty array if none are found.
+        • clarificationQuestions MUST be empty array if no clarification is required.
+        • complianceStatus MUST always be present.
+        • IDs MUST be stable, short, and deterministic (e.g., CI-1, Q-1).
+        • The descriptions MUST be concise and policy-focused.
+        • DO NOT invent ICMJE sections.
+        • DO NOT include reconstruction content unless explicitly requested.
+
         EXCEPTION:
         If the user explicitly requests reconstruction or reassembly,
         you MUST output ONLY the reconstructed manuscript
